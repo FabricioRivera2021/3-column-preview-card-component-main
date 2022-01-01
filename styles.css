@@ -1,0 +1,154 @@
+/*----------------------------------------------------- Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 15px;
+}
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 64px;
+  height: 40px;
+}
+button {
+  width: 145px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 50px;
+  mix-blend-mode: screen;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+/*----------------------------------------------- Contenedor principal */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 375px;
+  border-radius: 10px;
+  /* background-color: yellowgreen; */
+}
+/*----------------------------------------- Primer Contenedor "sedans" */
+.container-sedans {
+  position: relative;
+  max-width: 231px;
+  height: 348px;
+  margin: 45px;
+  /* background-color: hsl(31, 77%, 52%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-sedans::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 321px;
+  height: 439px;
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  top: -45px;
+  bottom: 0px;
+  left: -45px;
+  right: 0px;
+}
+/*------------------------------------------ Segundo Contenedor "SUVs" */
+.container-suvs {
+  position: relative;
+  max-width: 231px;
+  height: 348px;
+  margin: 45px;
+  /* background-color: hsl(184, 100%, 22%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-suvs::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 321px;
+  height: 439px;
+  background-color: hsl(184, 100%, 22%);
+  top: -45px;
+  bottom: 0px;
+  left: -45px;
+  right: 0px;
+}
+/*----------------------------------------- Tercer Contenedor "Luxury" */
+.container-luxury {
+  position: relative;
+  max-width: 231px;
+  height: 348px;
+  margin: 45px;
+  /* background-color: hsl(179, 100%, 13%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-luxury::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 321px;
+  height: 439px;
+  background-color: hsl(179, 100%, 13%);
+  top: -45px;
+  bottom: 0px;
+  left: -45px;
+  right: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*-------------------------------------------------- Hover states */
+button:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 95%);
+  background-color: transparent;
+}
+/*--------------------------------------------------- Media Query */
+@media (min-width: 600px) {
+  main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1440px;
+    border-radius: 10px;
+  }
+  .container-sedans::after {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  .container-luxury::after {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+}
