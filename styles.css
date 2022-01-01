@@ -8,7 +8,8 @@ html {
   font-size: 15px;
 }
 h1 {
-  display: none;
+  position: absolute;
+  top: -1500px;
 }
 h2 {
   font-family: "Big Shoulders Display", cursive;
